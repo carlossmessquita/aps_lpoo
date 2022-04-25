@@ -1,0 +1,28 @@
+Classe Jogador e derivadas:
+1. Habilidade: o método getHabilidade() irá retornar um número inteiro de 0 a 100 com a
+Classes.habilidade daquele jogador. Um objeto Jogador tem sua Classes.habilidade dada pelo atributo
+protegido Classes.habilidade. No entanto, cada subclasse deverá sobrescrever o método
+getHabilidade() de forma a calcular a Classes.habilidade de acordo com seus próprios atributos.
+
+O cálculo da Classes.habilidade deverá ser feito da seguinte forma:
+● Goleiro: ((Classes.habilidade*5) + (((int)(altura*100)) *2) + (reflexos*3)) /10
+● Defensor: ((Classes.habilidade*5) + (cobertura*3) + (desarme*2)) /10
+● Atacante: ((Classes.habilidade*5) + (velocidade*2) + (tecnica*3)) /10
+
+2. Gols: o método somaGol() deverá somar um gol ao registro de gols do jogador, que é
+inicializado com 0 e vai aumentando conforme o jogador faz um gol em uma partida.
+
+Classe Time:
+1. O construtor de Time recebe apenas o nome do time. Os jogadores são inseridos
+posteriormente. Nessa primeira implementação não há remoção de jogadores.
+2. O número de vitórias, derrotas e empates é inicializado com 0 e aumenta conforme o
+resultado dos jogos.
+3. O método getResultados() retorna uma string com os resultados de um time, no formato:
+Vitórias: 0, Empates: 0, Derrotas: 0.
+
+Classe Partida:
+1. O construtor recebe uma data e dois times.
+2. Os métodos golCasa() e golVisitante() adicionam gols aos atributos placarCasa e
+placarVisitante, respectivamente.
+3. O método getPlacar() retorna uma string com o resultado do jogo, no formato: Nome do Time
+da Casa 0 x 0 Nome do Time Visitante.
