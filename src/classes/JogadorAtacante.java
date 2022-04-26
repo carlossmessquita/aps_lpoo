@@ -1,35 +1,35 @@
 package classes;
 
 public class JogadorAtacante extends Jogador  {
-    private float altura;
-    private int reflexos;
+    private int tecnica;
+    private int velocidade;
     private int habilidade;
 
     // Construtores:
     public JogadorAtacante() {
-        setAltura((float) 1.70);
-        setReflexos(0);
+        setTecnica(0);
+        setVelocidade(0);
         setHabilidade(0);
     }
 
-    public JogadorAtacante(String nome, int camisa, float altura, int reflexos, int habilidade) {
+    public JogadorAtacante(String nome, int camisa, int tecnica, int velocidade, int habilidade) {
         setNome(nome);
         setCamisa(camisa);
-        setAltura(altura);
-        setReflexos(reflexos);
+        setTecnica(tecnica);
+        setVelocidade(velocidade);
         setHabilidade(habilidade);
     }
 
     // Métodos da classe:
-    public void setAltura(float altura) { this.altura = altura; }
-    public float getAltura() { return this.altura; }
-    public void setReflexos(int reflexos) { this.reflexos = reflexos; }
-    public int getReflexos() { return this.reflexos; }
+    public void setTecnica(int tecnica) { this.tecnica = tecnica; }
+    public float getTecnica() { return this.tecnica; }
+    public void setVelocidade(int velocidade) { this.velocidade = velocidade; }
+    public int getVelocidade() { return this.velocidade; }
 
     // Método sobrescrito:
     @Override
     public void setHabilidade(int numHabilidade) {
-        this.habilidade =  (((numHabilidade * 5) + ((int)(this.altura*100)) + (this.reflexos * 3))/10);
+        this.habilidade =  (((numHabilidade * 5) +  (this.velocidade * 2) + (this.tecnica * 3))/10);
     }
     @Override
     public int getHabilidade() { return this.habilidade; }
