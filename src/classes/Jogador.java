@@ -7,6 +7,7 @@ public abstract class Jogador {
     private int gols;
     private int camisa;
     private int habilidade;
+    private String posicao;
 
     // Construtores:
     public Jogador() {
@@ -36,11 +37,14 @@ public abstract class Jogador {
     }
     public void setIdade(int idade) { this.idade = idade; }
     public int getIdade() { return this.idade;}
+    public void setPosicao(String posicao) { this.posicao = posicao; }
+    public String getPosicao() { return posicao; }
     public void somaGol(int gol) { this.gols += 1; }
     public int getGols() { return this.gols; }
 
     // Métodos abstratos:
     public abstract void setHabilidade(int numHabilidade);
     public abstract int getHabilidade();
+
 }
 

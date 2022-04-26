@@ -1,4 +1,6 @@
 package classes;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Partida {
@@ -9,7 +11,19 @@ public class Partida {
     private int placarCasa;
     private int placarVisitante;
 
+    public Partida(String data, Time timeCasa, Time timeVisitante) {
+        setData(data);
+        setTimeCasa(timeCasa);
+        setTimeVisitante(timeVisitante);
+    }
     // Métodos:
+    public void setData(String dataRecebida) {
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        try { this.data = formato.parse(dataRecebida); }
+        catch (ParseException e) { throw new RuntimeException(e); }
+    }
+    public Date getData() { return this.data; }
+
     public void setTimeCasa(Time timeCasa) { this.timeCasa = timeCasa; }
 
     public String getTimeCasa() { return this.timeCasa.getNome(); }
@@ -31,5 +45,15 @@ public class Partida {
         .format(getTimeCasa() + " %d x %d " + getTimeVisitante(),
                 getPlacarCasa(), getPlacarVisitante());
         return placar;
+    }
+
+    public void info() {
+        System.out.println(timeCasa.getNome() +" vs "+timeVisitante.getNome());
+        System.out.println("Data da Partida: " + getData() + "\n");
+        timeCasa.relatorio();
+        System.out.println("\n");
+        timeVisitante.relatorio();
+        System.out.print("\nPlacar:\n");
+        System.out.println(getPlacar());
     }
 }

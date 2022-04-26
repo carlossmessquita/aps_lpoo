@@ -10,14 +10,17 @@ public class JogadorAtacante extends Jogador  {
         setTecnica(0);
         setVelocidade(0);
         setHabilidade(0);
+        setPosicao("Ataque");
     }
 
-    public JogadorAtacante(String nome, int camisa, int tecnica, int velocidade, int habilidade) {
+    public JogadorAtacante(String nome, int camisa, int idade,int tecnica, int velocidade, int habilidade) {
         setNome(nome);
         setCamisa(camisa);
+        setIdade(idade);
         setTecnica(tecnica);
         setVelocidade(velocidade);
         setHabilidade(habilidade);
+        setPosicao("Ataque");
     }
 
     // Métodos da classe:
@@ -29,7 +32,12 @@ public class JogadorAtacante extends Jogador  {
     // Método sobrescrito:
     @Override
     public void setHabilidade(int numHabilidade) {
-        this.habilidade =  (((numHabilidade * 5) +  (this.velocidade * 2) + (this.tecnica * 3))/10);
+        if (numHabilidade >= 0 && numHabilidade <= 100) {
+            this.habilidade =  (((numHabilidade * 5) +  (this.velocidade * 2) + (this.tecnica * 3))/10);
+        } else {
+            System.out.println("A habilidade deve ser um inteiro entre 0 e 100!");
+            this.habilidade = 0;
+        }
     }
     @Override
     public int getHabilidade() { return this.habilidade; }

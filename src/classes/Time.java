@@ -11,7 +11,7 @@ public class Time {
 
     // Construtores:
     public Time() {
-        setNome("Richmond FC");
+        setNome("Time Null");
     }
 
     public Time(String nome, int vitoria, int derrota, int empate) {
@@ -39,7 +39,7 @@ public class Time {
             System.out.println(jogadores.get(i).getNome());
         }
         if (jogadores.size() == 0) { return "Não há Jogadores no time!"; }
-        else { return "São os jogadores do time!"; }
+        else { return "\n"; }
     }
 
     public void setVitoria(int vitoria) {
@@ -68,5 +68,20 @@ public class Time {
         String resultado = String.format("Vitórias: %d\nDerrotas: %d\nEmpates: %d", getVitoria(), getDerrota(), getEmpate());
         System.out.println(resultado);
         return resultado;
+    }
+
+    public String relatorio() {
+        System.out.println(this.getNome());
+        for (int i = 0; i < jogadores.size(); i++) {
+            int hab = jogadores.get(i).getHabilidade();
+            int num = jogadores.get(i).getCamisa();
+            int idd = jogadores.get(i).getIdade();
+            String pos = jogadores.get(i).getPosicao();
+            System.out.println("----------------------------------------");
+            System.out.println(jogadores.get(i).getNome() + "--" + pos);
+            System.out.println("Nº Camisa: "+ num + " Idade: "+ idd +" Hab: " + hab);
+        }
+        if (jogadores.size() == 0) { return "Não há Jogadores no time!"; }
+        else { return " "; }
     }
 }
