@@ -24,10 +24,18 @@ public class JogadorAtacante extends Jogador  {
     }
 
     // Métodos da classe:
-    public void setTecnica(int tecnica) { this.tecnica = tecnica; }
-    public float getTecnica() { return this.tecnica; }
-    public void setVelocidade(int velocidade) { this.velocidade = velocidade; }
-    public int getVelocidade() { return this.velocidade; }
+    public void setTecnica(int tecnica) {
+        this.tecnica = tecnica;
+    }
+    public float getTecnica() {
+        return this.tecnica;
+    }
+    public void setVelocidade(int velocidade) {
+        this.velocidade = velocidade;
+    }
+    public int getVelocidade() {
+        return this.velocidade;
+    }
 
     // Método sobrescrito:
     @Override
@@ -40,6 +48,8 @@ public class JogadorAtacante extends Jogador  {
         }
     }
     @Override
-    public int getHabilidade() { return this.habilidade; }
+    public int getHabilidade() {
+        return this.habilidade;
+    }
 
 }

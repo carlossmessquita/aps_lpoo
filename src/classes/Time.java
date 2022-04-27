@@ -38,8 +38,12 @@ public class Time {
         for (int i = 0; i < jogadores.size(); i++) {
             System.out.println(jogadores.get(i).getNome());
         }
-        if (jogadores.size() == 0) { return "Não há Jogadores no time!"; }
-        else { return "\n"; }
+        if (jogadores.size() == 0) {
+            return "Não há Jogadores no time!";
+        }
+        else {
+            return "\n";
+        }
     }
 
     public void setVitoria(int vitoria) {
@@ -54,7 +58,9 @@ public class Time {
         this.derrota += 1;
     }
 
-    public int getDerrota() { return this.derrota; }
+    public int getDerrota() {
+        return this.derrota;
+    }
 
     public void setEmpate(int empate) {
         this.empate += 1;
@@ -70,16 +76,17 @@ public class Time {
         return resultado;
     }
 
-    public String relatorio() {
+    public String escalacao() {
         System.out.println(this.getNome());
         for (int i = 0; i < jogadores.size(); i++) {
             int hab = jogadores.get(i).getHabilidade();
             int num = jogadores.get(i).getCamisa();
             int idd = jogadores.get(i).getIdade();
+            int gols = jogadores.get(i).getGols();
             String pos = jogadores.get(i).getPosicao();
             System.out.println("----------------------------------------");
             System.out.println(jogadores.get(i).getNome() + "--" + pos);
-            System.out.println("Nº Camisa: "+ num + " Idade: "+ idd +" Hab: " + hab);
+            System.out.println("Nº Camisa: "+ num + " Idade: "+ idd +" Hab: " + hab + " Gols: " + gols);
         }
         if (jogadores.size() == 0) { return "Não há Jogadores no time!"; }
         else { return " "; }

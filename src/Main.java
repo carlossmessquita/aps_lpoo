@@ -57,15 +57,21 @@ public class Main {
         // Instanciando Partida:
         Partida finalDaCopa = new Partida("02/30/1901", afcRichmond, escolaRaimon);
 
+        afcRichmond.escalacao();
+        escolaRaimon.escalacao();
+
         for (int i = 0; i <= 2;  i++) {
+
             finalDaCopa.golCasa();
         }
+        daniRojas.somaGol();
+        daniRojas.somaGol();
+        jamesTartt.somaGol();
+
         finalDaCopa.golVisitante();
+        shuyaGoenji.somaGol();
 
         //Dados da Partida:
         finalDaCopa.info();
-
-
-
     }
 }

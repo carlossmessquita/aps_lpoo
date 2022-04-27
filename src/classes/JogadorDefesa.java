@@ -20,10 +20,18 @@ public class JogadorDefesa extends Jogador {
         setPosicao("Defesa");
     }
 
-    public void setCobertura(int cobertura) { this.cobertura = cobertura; }
-    public int getCobertura() { return this.cobertura; }
-    public void setDesarme(int desarme) { this.desarme = desarme; }
-    public int getDesarme() { return this.desarme; }
+    public void setCobertura(int cobertura) {
+        this.cobertura = cobertura;
+    }
+    public int getCobertura() {
+        return this.cobertura;
+    }
+    public void setDesarme(int desarme) {
+        this.desarme = desarme;
+    }
+    public int getDesarme() {
+        return this.desarme;
+    }
     @Override
     public void setHabilidade(int numHabilidade) {
         if (numHabilidade >= 0 && numHabilidade <= 100){

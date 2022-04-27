@@ -24,10 +24,18 @@ public class JogadorGoleiro extends Jogador {
     }
 
     // Métodos da classe:
-    public void setAltura(float altura) { this.altura = altura; }
-    public float getAltura() { return this.altura; }
-    public void setReflexos(int reflexos) { this.reflexos = reflexos; }
-    public int getReflexos() { return this.reflexos; }
+    public void setAltura(float altura) {
+        this.altura = altura;
+    }
+    public float getAltura() {
+        return this.altura;
+    }
+    public void setReflexos(int reflexos) {
+        this.reflexos = reflexos;
+    }
+    public int getReflexos() {
+        return this.reflexos;
+    }
 
     // Método sobrescrito:
     @Override
@@ -40,5 +48,7 @@ public class JogadorGoleiro extends Jogador {
         }
     }
     @Override
-    public int getHabilidade() { return this.habilidade; }
+    public int getHabilidade() {
+        return this.habilidade;
+    }
 }
