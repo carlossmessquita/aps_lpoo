@@ -38,12 +38,7 @@ public class JogadorGoleiro extends Jogador {
     // Método sobrescrito:
     @Override
     public void setHabilidade(int habilidade) {
-        if (habilidade >= 0 && habilidade <= 100) {
-            this.habilidade =  (((habilidade * 5) + ((int)(this.altura*100)) + (this.reflexos * 3))/10);
-        } else {
-            System.out.println("A habilidade deve ser um inteiro entre 0 e 100!");
-            this.habilidade = 0;
-        }
+        this.habilidade =  (((habilidade * 5) + ((int)(this.altura*100)) + (this.reflexos * 3))/10);
     }
     @Override
     public int getHabilidade() {

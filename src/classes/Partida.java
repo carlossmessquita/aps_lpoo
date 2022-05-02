@@ -59,9 +59,7 @@ public class Partida {
     }
 
     public String getPlacar() {
-        String placar = String
-        .format(getTimeCasa() + " %d x %d " + getTimeVisitante(),
-                getPlacarCasa(), getPlacarVisitante());
+        String placar = getTimeCasa()+"-"+getPlacarCasa()+"x"+getPlacarVisitante()+"-"+getTimeVisitante();
         return placar;
     }
 

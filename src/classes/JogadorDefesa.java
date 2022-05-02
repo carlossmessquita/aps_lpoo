@@ -32,12 +32,7 @@ public class JogadorDefesa extends Jogador {
     }
     @Override
     public void setHabilidade(int habilidade) {
-        if (habilidade >= 0 && habilidade <= 100){
-            this.habilidade = ((habilidade * 5) + (this.cobertura * 3) + (this.desarme * 2))/10;
-        } else {
-            System.out.println("A habilidade deve ser um inteiro entre 0 e 100!");
-            this.habilidade = 0;
-        }
+        this.habilidade = ((habilidade * 5) + (this.cobertura * 3) + (this.desarme * 2))/10;
     }
     @Override
     public int getHabilidade() {
