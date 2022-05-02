@@ -8,7 +8,6 @@ public class JogadorDefesa extends Jogador {
         setCobertura(0);
         setDesarme(0);
         setHabilidade(0);
-        setPosicao("Defesa");
     }
     public JogadorDefesa(String nome, int camisa, int idade, int cobertura, int desarme, int habilidade) {
         setNome(nome);
@@ -17,7 +16,6 @@ public class JogadorDefesa extends Jogador {
         setCobertura(cobertura);
         setDesarme(desarme);
         setHabilidade(habilidade);
-        setPosicao("Defesa");
     }
 
     public void setCobertura(int cobertura) {
@@ -33,9 +31,9 @@ public class JogadorDefesa extends Jogador {
         return this.desarme;
     }
     @Override
-    public void setHabilidade(int numHabilidade) {
-        if (numHabilidade >= 0 && numHabilidade <= 100){
-            this.habilidade = ((numHabilidade * 5) + (this.cobertura * 3) + (this.desarme * 2))/10;
+    public void setHabilidade(int habilidade) {
+        if (habilidade >= 0 && habilidade <= 100){
+            this.habilidade = ((habilidade * 5) + (this.cobertura * 3) + (this.desarme * 2))/10;
         } else {
             System.out.println("A habilidade deve ser um inteiro entre 0 e 100!");
             this.habilidade = 0;

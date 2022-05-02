@@ -17,9 +17,9 @@ public class Partida {
         setTimeVisitante(timeVisitante);
     }
     // Métodos:
-    public void setData(String dataRecebida) {
+    public void setData(String data) {
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-        try { this.data = formato.parse(dataRecebida); }
+        try { this.data = formato.parse(data); }
         catch (ParseException e) { throw new RuntimeException(e); }
     }
     public Date getData() {
@@ -65,13 +65,8 @@ public class Partida {
         return placar;
     }
 
-    public void info() {
-        System.out.println(timeCasa.getNome() +" vs "+timeVisitante.getNome());
+    public void informacaoPartida() {
+        System.out.println(timeCasa.getNome() +" x "+ timeVisitante.getNome());
         System.out.println("Data da Partida: " + getData() + "\n");
-        timeCasa.escalacao();
-        System.out.println("\n");
-        timeVisitante.escalacao();
-        System.out.print("\nPlacar:\n");
-        System.out.println(getPlacar());
     }
 }

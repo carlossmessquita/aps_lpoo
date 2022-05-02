@@ -11,15 +11,15 @@ public abstract class Jogador {
 
     // Construtores:
     public Jogador() {
-        setNome("Jogador Nº 1");
-        setCamisa(1);
-        setIdade(18);
+        setNome("Sem Nome");
+        setCamisa(0);
+        setIdade(0);
         this.gols = 0;
     }
 
-    public Jogador(String nome, int numCamisa, int habilidade) {
+    public Jogador(String nome, int camisa, int habilidade) {
         setNome(nome);
-        setCamisa(numCamisa);
+        setCamisa(camisa);
         setHabilidade(habilidade);
         this.gols = 0;
     }
@@ -31,8 +31,8 @@ public abstract class Jogador {
     public String getNome() {
         return this.nome;
     }
-    public void setCamisa(int numCamisa) {
-        this.camisa = numCamisa;
+    public void setCamisa(int camisa) {
+        this.camisa = camisa;
     }
     public int getCamisa() {
         return this.camisa;
@@ -57,7 +57,7 @@ public abstract class Jogador {
     }
 
     // Métodos abstratos:
-    public abstract void setHabilidade(int numHabilidade);
+    public abstract void setHabilidade(int habilidade);
     public abstract int getHabilidade();
 }
 

@@ -10,7 +10,6 @@ public class JogadorGoleiro extends Jogador {
         setAltura((float) 1.70);
         setReflexos(0);
         setHabilidade(0);
-        setPosicao("Goleiro");
     }
 
     public JogadorGoleiro(String nome, int camisa, int idade, float altura, int reflexos, int habilidade) {
@@ -20,7 +19,6 @@ public class JogadorGoleiro extends Jogador {
         setAltura(altura);
         setReflexos(reflexos);
         setHabilidade(habilidade);
-        setPosicao("Goleiro");
     }
 
     // Métodos da classe:
@@ -39,9 +37,9 @@ public class JogadorGoleiro extends Jogador {
 
     // Método sobrescrito:
     @Override
-    public void setHabilidade(int numHabilidade) {
-        if (numHabilidade >= 0 && numHabilidade <= 100) {
-            this.habilidade =  (((numHabilidade * 5) + ((int)(this.altura*100)) + (this.reflexos * 3))/10);
+    public void setHabilidade(int habilidade) {
+        if (habilidade >= 0 && habilidade <= 100) {
+            this.habilidade =  (((habilidade * 5) + ((int)(this.altura*100)) + (this.reflexos * 3))/10);
         } else {
             System.out.println("A habilidade deve ser um inteiro entre 0 e 100!");
             this.habilidade = 0;

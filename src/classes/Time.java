@@ -75,20 +75,4 @@ public class Time {
         System.out.println(resultado);
         return resultado;
     }
-
-    public String escalacao() {
-        System.out.println(this.getNome());
-        for (int i = 0; i < jogadores.size(); i++) {
-            int hab = jogadores.get(i).getHabilidade();
-            int num = jogadores.get(i).getCamisa();
-            int idd = jogadores.get(i).getIdade();
-            int gols = jogadores.get(i).getGols();
-            String pos = jogadores.get(i).getPosicao();
-            System.out.println("----------------------------------------");
-            System.out.println(jogadores.get(i).getNome() + "--" + pos);
-            System.out.println("Nº Camisa: "+ num + " Idade: "+ idd +" Hab: " + hab + " Gols: " + gols);
-        }
-        if (jogadores.size() == 0) { return "Não há Jogadores no time!"; }
-        else { return " "; }
-    }
 }
